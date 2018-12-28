@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import './App.css';
+import classes from  './App.css';
 import Validation from './Validation/Validation.js';
-import './CharComp/CharComp.css';
+//import './CharComp/CharComp.css';
 import CharComp from './CharComp/CharComp';
 
 class App extends Component {
@@ -38,14 +38,19 @@ class App extends Component {
      
     
   render() {
-            
+          
+      
+      
+      
+      
+      
     return (
-      <div className="App">
+      <div >
        <input type='text' onChange={this.changeHandler} />
         
-        <p>length is {this.state.len}</p>
+        <p className={classes.pink}>length is {this.state.len}</p>
         <Validation l={this.state.len} />
-        <div>
+        <div className={classes.Cyan}>
         {
      this.state.component.map((comp,index)=> <CharComp ch={comp} val={this.removeEl.bind(this,index)}/>  
      
